@@ -5,7 +5,7 @@ ros::NodeHandle nh;
 
 std_msgs::String str_msg;
 
-ros::Publisher chatter("chatter", &str_msg); //declare that we want to publish string message to the topic "chatter" with a node named "chatter"
+ros::Publisher chatter("chatter", &str_msg); //declare that we want to publish string message to the topic "chatter" with a class named "chatter"
 
 char hello[13] = "hello world!";
 
