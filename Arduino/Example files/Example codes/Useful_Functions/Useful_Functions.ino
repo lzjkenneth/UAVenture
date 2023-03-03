@@ -19,7 +19,7 @@ void handle_cmd( const geometry_msgs::Twist& cmd_msg)
 }
 
 
-
+// Get the actual motor speed and rpm
 void getMotorData(unsigned long time)
 { // for updatePid()
   rpm_act1 = double((posA - countAnt1) * 60 * 1000) / double(time * encoder_cpr * gear_ratio);
@@ -127,7 +127,7 @@ void publishIMU(unsigned long time)
 
 
 
-
+// Publish lidar data
 void publishLIDAR(unsigned long time)
 {
   lidar_msg.header.stamp = nh.now();
